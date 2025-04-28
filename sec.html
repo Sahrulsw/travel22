@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TravelKu - Liburan dan Sewa Kendaraan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .hover-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .hover-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+    <header id="navbar" class="fixed w-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md shadow-md z-50 transition-all">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+          <h1 class="text-2xl font-bold">TravelKu</h1>
+      
+          <!-- Desktop Menu -->
+          <nav id="menu-desktop" class="space-x-6 hidden md:flex">
+            <a href="#home" class="hover:text-blue-500 dark:hover:text-blue-300">Home</a>
+            <a href="#paket" class="hover:text-blue-500 dark:hover:text-blue-300">Paket Wisata</a>
+            <a href="#sewa" class="hover:text-blue-500 dark:hover:text-blue-300">Sewa Kendaraan</a>
+            <a href="#testimoni" class="hover:text-blue-500 dark:hover:text-blue-300">Testimoni</a>
+            <a href="#kontak" class="hover:text-blue-500 dark:hover:text-blue-300">Kontak</a>
+          </nav>
+      
+          <!-- Mobile Hamburger -->
+          <div class="md:hidden flex items-center gap-4">
+            <button id="dark-toggle" class="text-2xl focus:outline-none">&#9788;</button>
+            <button id="menu-toggle" class="text-3xl focus:outline-none">&#9776;</button>
+          </div>
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div id="menu-mobile" class="hidden md:hidden flex flex-col bg-white dark:bg-gray-800 shadow-md rounded-b-lg py-4 px-6 space-y-4">
+          <a href="#home" class="hover:text-blue-500 dark:hover:text-blue-300">Home</a>
+          <a href="#paket" class="hover:text-blue-500 dark:hover:text-blue-300">Paket Wisata</a>
+          <a href="#sewa" class="hover:text-blue-500 dark:hover:text-blue-300">Sewa Kendaraan</a>
+          <a href="#testimoni" class="hover:text-blue-500 dark:hover:text-blue-300">Testimoni</a>
+        </div>
+      </header>
+      
+  <!-- Hero -->
+  <section id="home" class="min-h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1527249014055-1b2b9d5e9fbe?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <div class="text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Temukan Petualanganmu</h2>
+      <p class="text-lg md:text-2xl mb-8">Jelajahi dunia dengan TravelKu</p>
+      <a href="#paket" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-full transition duration-300">Lihat Paket</a>
+    </div>
+  </section>
+  
+  <!-- Paket Wisata -->
+  <section id="paket" class="py-20 px-6 max-w-7xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Paket Wisata</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="hover-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1571738318198-fda6afce5348?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wisata Gunung" class="w-full h-64 object-cover rounded-md">
+        <h4 class="text-xl font-semibold mb-2">Wisata Gunung</h4>
+        <p class="mb-4">Rasakan sensasi mendaki dan panorama indah dari puncak gunung.</p>
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full">Detail</button>
+      </div>
+      <div class="hover-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1596374868225-ffa16761a7df?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wisata Pantai" class="w-full h-64 object-cover rounded-md">
+        <h4 class="text-xl font-semibold mb-2">Wisata Pantai</h4>
+        <p class="mb-4">Nikmati keindahan pasir putih dan sunset romantis di pantai terbaik.</p>
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full">Detail</button>
+      </div>
+      <div class="hover-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1644990192051-e76ef8fff64f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wisata Kota" class="w-full h-64 object-cover rounded-md">
+        <h4 class="text-xl font-semibold mb-2">Wisata Kota</h4>
+        <p class="mb-4">Eksplorasi kota-kota bersejarah dengan budaya dan kuliner menarik.</p>
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full">Detail</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sewa Kendaraan -->
+  <section id="sewa" class="py-20 bg-gray-100 dark:bg-gray-800 px-6">
+    <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Sewa Kendaraan</h3>
+    <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div class="hover-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6" data-aos="flip-left">
+        <img src="https://images.unsplash.com/photo-1627395427294-d01af2f943ac?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sewa Mobil" class="w-full h-64 object-cover rounded-md">
+        <h4 class="text-xl font-semibold mb-2">Sewa Mobil</h4>
+        <p class="mb-4">Mobil berkualitas untuk kebutuhan liburan dan bisnis Anda.</p>
+        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full">Sewa Sekarang</button>
+      </div>
+      <div class="hover-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6" data-aos="flip-left" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1677344758233-6c49769a4554?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sewa Motor" class="w-full h-64 object-cover rounded-md">
+        <h4 class="text-xl font-semibold mb-2">Sewa Motor</h4>
+        <p class="mb-4">Motor matic dan sport, cocok untuk menjelajahi setiap sudut kota.</p>
+        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full">Sewa Sekarang</button>
+      </div>
+      <div class="hover-card bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6" data-aos="flip-left" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sewa Van" class="w-full h-64 object-cover rounded-md">
+        <h4 class="text-xl font-semibold mb-2">Sewa Van</h4>
+        <p class="mb-4">Kendaraan besar untuk perjalanan grup atau keluarga besar.</p>
+        <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full">Sewa Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section id="testimoni" class="py-20 bg-white dark:bg-gray-900">
+    <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Apa Kata Mereka?</h3>
+    <div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+      <div class="hover-card bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md max-w-xs text-center" data-aos="fade-right">
+        <p class="italic">"TravelKu bikin liburan saya tak terlupakan! Pelayanan cepat dan ramah."</p>
+        <h4 class="font-bold mt-4">- Andi, Bandung</h4>
+      </div>
+      <div class="hover-card bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md max-w-xs text-center" data-aos="fade-left" data-aos-delay="100">
+        <p class="italic">"Sewa mobilnya gampang, mobilnya bersih dan nyaman. Recommended banget!"</p>
+        <h4 class="font-bold mt-4">- Siti, Jakarta</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class=" bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-white">Kontak Kami</h2>
+      <div class="flex justify-center space-x-6">
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/083137609221" target="_blank" class="text-green-500 hover:text-green-600 text-4xl transition">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+  
+        <!-- Instagram -->
+        <a href="https://instagram.com/" target="_blank" class="text-pink-500 hover:text-pink-600 text-4xl transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+  
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/" target="_blank" class="text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-400 text-4xl transition">
+          <i class="fab fa-tiktok"></i>
+        </a>
+  
+        <!-- Email -->
+        <a href="mailto:travelmu@email.com" class="text-blue-500 hover:text-blue-600 text-4xl transition">
+          <i class="fas fa-envelope"></i>
+        </a>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm dark:text-gray-400">
+    &copy; 2025 TravelKu. All rights reserved.
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const darkToggle = document.getElementById('dark-toggle');
+  const htmlEl = document.documentElement;
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuMobile = document.getElementById('menu-mobile');
+
+  // Dark mode auto detect
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    htmlEl.classList.add('dark');
+    darkToggle.innerHTML = '&#9790;';
+  } else {
+    htmlEl.classList.remove('dark');
+    darkToggle.innerHTML = '&#9788;';
+  }
+
+  darkToggle.addEventListener('click', () => {
+    htmlEl.classList.toggle('dark');
+    if (htmlEl.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+      darkToggle.innerHTML = '&#9790;';
+    } else {
+      localStorage.setItem('theme', 'light');
+      darkToggle.innerHTML = '&#9788;';
+    }
+  });
+
+  // Toggle mobile menu
+  menuToggle.addEventListener('click', () => {
+    menuMobile.classList.toggle('hidden');
+  });
+
+  // Auto close menu after click link
+  document.querySelectorAll('#menu-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuMobile.classList.add('hidden');
+    });
+  });
+
+    // Auto detect theme
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      htmlEl.classList.add('dark');
+      darkToggle.innerHTML = '&#9790;';
+    } else {
+      htmlEl.classList.remove('dark');
+      darkToggle.innerHTML = '&#9788;';
+    }
+
+    darkToggle.addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      if (htmlEl.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        darkToggle.innerHTML = '&#9790;';
+      } else {
+        localStorage.setItem('theme', 'light');
+        darkToggle.innerHTML = '&#9788;';
+      }
+    });
+  </script>
+
+</body>
+</html>
